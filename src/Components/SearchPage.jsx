@@ -18,16 +18,16 @@ const SearchPage = (props) => {
          setCountryListDefault(data)
        });}
 
-  const updateInput = async (input) => {
-     const filtered = countryListDefault.filter(country => {
+  const updateInput =  (input) => {
+     const filtered =  countryListDefault.filter(country => {
       return country.alpha2Code.toLowerCase().includes(input.toLowerCase())
      })
      setInput(input);
      setCountryList(filtered);
   }
 
-  const regionInput = async (input) => {
-    const filtered = countryListDefault.filter(country => {
+  const regionInput =  (input) => {
+    const filtered =  countryListDefault.filter(country => {
      return country.region.toLowerCase().includes(input.toLowerCase())
     })
     setInputReg(input);
@@ -43,7 +43,8 @@ const SearchPage = (props) => {
        input={input} 
        onChange={updateInput}
       />
-    <br/><br/><br/><br/>
+
+      <br/><br/><br/><br/>
 
       <SearchBarReg 
        input={inputReg} 
